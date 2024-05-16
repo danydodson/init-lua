@@ -1,3 +1,5 @@
+-- https://github.com/jackMort/ChatGPT.nvim
+
 -- Turning off ChatGPT for now
 if true then
  return {}

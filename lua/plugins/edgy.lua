@@ -1,3 +1,4 @@
+-- https://github.com/folke/edgy.nvim
 return {
   {
     "folke/edgy.nvim",
