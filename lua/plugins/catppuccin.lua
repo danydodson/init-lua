@@ -5,6 +5,8 @@ return {
     "catppuccin/nvim",
     lazy = true,
     name = "catppuccin",
+    no_italic = true,
+    transparent_background = true,
     opts = {
       integrations = {
         aerial = true,

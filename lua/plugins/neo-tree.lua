@@ -16,22 +16,22 @@ return {
           hide_by_name = {
             ".DS_Store",
             "thumbs.db",
-            -- "node_modules",
+            "node_modules",
             ".git",
           },
           hide_by_pattern = {
-            --"*.meta",
-            --"*/src/*/tsconfig.json",
+            "*.meta",
+            "*/src/*/tsconfig.json",
           },
           always_show = { -- remains visible even if other settings would normally hide it
-            --".gitignore",
+            ".gitignore",
           },
           never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
-            --".DS_Store",
-            --"thumbs.db",
+            ".DS_Store",
+            "thumbs.db",
           },
           never_show_by_pattern = { -- uses glob style patterns
-            --".null-ls_*",
+            ".null-ls_*",
           },
         },
         bind_to_cwd = false,
