@@ -1,15 +1,12 @@
+local fn = vim.fn
+local api = vim.api
+
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
--- Add any additional options here
 
+
+vim.g.vimsyn_embed = 'l'
 vim.g.autoformat = false
-
-vim.opt.listchars:append({ extends = "…" })
-vim.opt.listchars:append({ nbsp = "+" })
-vim.opt.listchars:append({ precedes = "…" })
-vim.opt.listchars:append({ tab = "·»" })
-vim.opt.listchars:append({ trail = "·" })
-
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -41,5 +38,11 @@ vim.opt.updatetime = 50
 vim.g.python3_host_prog = os.getenv("HOME") .. "/.config/pyenv/versions/3.12.3/bin/python"
 
 vim.g.loaded_perl_provider = 0
-
 vim.g.loaded_ruby_provider = 0
+vim.g.did_install_default_menus = 1
+
+vim.opt.listchars:append({ extends = "…" })
+vim.opt.listchars:append({ nbsp = "+" })
+vim.opt.listchars:append({ precedes = "…" })
+vim.opt.listchars:append({ tab = "·»" })
+vim.opt.listchars:append({ trail = "·" })

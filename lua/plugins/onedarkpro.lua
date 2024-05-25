@@ -3,12 +3,34 @@
 return {
   {
     "olimorris/onedarkpro.nvim",
-    priority = 1000, -- Ensure it loads first
     lazy = true,
+    priority = 1000,
+    name = "onedarkpro",
     opts = {
-      transparent = true, -- Enable this to disable setting the background color
-      terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
+      style = "vivid",
+      no_italic = true,
+      transparent_background = true,
+      noice = true,
+      hide_inactive_statusline = false,
+      dim_inactive = false,
+      lualine_bold = false,
+      transparent = true,
+      terminal_colors = true,
+      styles = {
+        types = "NONE",
+        methods = "NONE",
+        numbers = "NONE",
+        strings = "NONE",
+        comments = "NONE",
+        keywords = "NONE",
+        constants = "NONE",
+        functions = "NONE",
+        operators = "NONE",
+        variables = "NONE",
+        parameters = "NONE",
+        conditionals = "NONE",
+        virtual_text = "NONE",
+      }
     },
-    noice = true,
   },
 }
