@@ -33,7 +33,7 @@ vim.opt.undofile = true
 -- prevent jumping when opening an edgebar.
 vim.opt.splitkeep = "screen"
 
-vim.g.lazyvim_picker = "fzf"
+-- vim.g.lazyvim_picker = "fzf"
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
