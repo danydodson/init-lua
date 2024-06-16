@@ -87,9 +87,9 @@ vim.keymap.set("n", "<leader>uO", "<cmd>lua require('config.util').toggle_colorc
 local lazyterm = function() LazyVim.terminal(nil, { cwd = LazyVim.root() }) end
 vim.keymap.set("n", "<leader>ft", lazyterm, { desc = "Terminal (Root Dir)" })
 vim.keymap.set("n", "<leader>fT", function() LazyVim.terminal() end, { desc = "Terminal (cwd)" })
-vim.keymap.set("n", "<C-.>", lazyterm, { desc = "Terminal (cwd)" })
+vim.keymap.set("n", "<C-,>", lazyterm, { desc = "Terminal (cwd)" })
 vim.keymap.set("n", "<C-/>", "<nop>", { desc = "Toggle Terminal" })
 
 -- Terminal Mappings
-vim.keymap.set("t", "<C-.>", "<cmd>close<cr>", { desc = "Hide Terminal" })
+vim.keymap.set("t", "<C-,>", "<cmd>close<cr>", { desc = "Hide Terminal" })
 vim.keymap.set("t", "<C-/>", "<nop>", { desc = "Hide Terminal" })
