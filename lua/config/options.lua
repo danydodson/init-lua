@@ -1,5 +1,5 @@
-local fn = vim.fn
-local api = vim.api
+-- local fn = vim.fn
+-- local api = vim.api
 
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
@@ -24,7 +24,12 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.config/vim/undodir"
 vim.opt.undofile = true
 
--- vim.opt.hlsearch = false
+-- prevent jumping when opening an edgebar.
+vim.opt.splitkeep = "screen"
+
+vim.g.lazyvim_picker = "fzf"
+
+vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
@@ -36,7 +41,6 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.g.python3_host_prog = os.getenv("HOME") .. "/.config/pyenv/versions/3.12.3/bin/python"
-
 vim.g.loaded_perl_provider = 0
 vim.g.loaded_ruby_provider = 0
 vim.g.did_install_default_menus = 1

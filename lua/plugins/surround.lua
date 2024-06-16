@@ -1,5 +1,4 @@
--- https://github.com/echasnovski/mini.surrounded
--- https://www.lazyvim.org/plugins/coding#minisurround
+-- https://github.com/echasnovski/mini.surround
 
 return {
   {

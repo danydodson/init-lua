@@ -4,6 +4,12 @@
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    },
     opts = {
       sources = { "filesystem", "buffers", "git_status", "document_symbols" },
       open_files_do_not_replace_types = { "terminal", "Trouble", "trouble", "qf", "Outline" },
@@ -11,17 +17,16 @@ return {
         filtered_items = {
           visible = false, -- when true, they will just be displayed differently than normal items
           hide_dotfiles = false,
-          hide_gitignored = true,
-          -- hide_hidden = true, -- only works on Windows for hidden files/directories
+          hide_gitignored = false,
           hide_by_name = {
             ".DS_Store",
             "thumbs.db",
-            "node_modules",
-            ".git",
+            -- "node_modules",
+            -- ".git",
           },
           hide_by_pattern = {
-            "*.meta",
-            "*/src/*/tsconfig.json",
+            -- "*.meta",
+            -- "*/src/*/tsconfig.json",
           },
           always_show = { -- remains visible even if other settings would normally hide it
             ".gitignore",

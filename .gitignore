@@ -10,24 +10,17 @@ neoconf.json
 plugin
 queries
 spell
+.history
+.vscode
+hide
 
-# Global gitignore
-# ----------------
-
-# Mac OS X
+# macos
 .AppleDouble
 .DS_Store
 .LSOverride
 ._*
 
-# Windoze
-$RECYCLE.BIN/
-Thumbs.db
-Thumbs.db:encryptable
-ehthumbs.db
-ehthumbs_vista.db
-
-# (Neo)Vim
+# (neo)vim
 *~
 .netrwhist
 Session.vim
@@ -39,13 +32,6 @@ Sessionx.vim
 [._]sw[a-p]
 [._]*.un~
 tags
-
-# VS Code
-.history
-.vscode
-
-# JetBrains
-.idea
 
 # ???
 .repro

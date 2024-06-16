@@ -5,10 +5,10 @@
 local util = require("config.util")
 
 -- Remove key mappings that conflict with macOS
--- vim.keymap.del("n", "<C-Up>")
--- vim.keymap.del("n", "<C-Down>")
--- vim.keymap.del("n", "<C-Left>")
--- vim.keymap.del("n", "<C-Right>")
+vim.keymap.del("n", "<C-Up>")
+vim.keymap.del("n", "<C-Down>")
+vim.keymap.del("n", "<C-Left>")
+vim.keymap.del("n", "<C-Right>")
 
 -- leader key
 -- vim.g.mapleader = " "
@@ -26,14 +26,10 @@ local util = require("config.util")
 -- vim.keymap.set("n", "N", "Nzzzv")
 
 -- Back to normal mode
-vim.keymap.set("i", "jj", "<ESC>")
+-- vim.keymap.set("i", "jj", "<ESC>")
 
-vim.keymap.set("n", "<leader>vwm", function()
-  require("vim-with-me").StartVimWithMe()
-end)
-vim.keymap.set("n", "<leader>svwm", function()
-  require("vim-with-me").StopVimWithMe()
-end)
+-- vim.keymap.set("n", "<leader>vwm", function() require("vim-with-me").StartVimWithMe() end)
+-- vim.keymap.set("n", "<leader>svwm", function() require("vim-with-me").StopVimWithMe() end)
 
 -- greatest remap ever
 -- vim.keymap.set("x", "<leader>p", [["_dP]])
@@ -45,25 +41,20 @@ end)
 -- vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
-vim.keymap.set("i", "<C-c>", "<Esc>")
+-- vim.keymap.set("i", "<C-c>", "<Esc>")
 
-vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+-- vim.keymap.set("n", "Q", "<nop>")
+
+-- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+
+-- format
+vim.keymap.set("n", "<leader>fo", vim.lsp.buf.format)
 
 -- make file executable
--- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- source current file
--- vim.keymap.set("n", "<leader><leader>", function()
---   vim.cmd("so")
--- end)
-
--- Resize with simple arrow keys
-vim.keymap.set("n", "<Up>", "<cmd>resize +5<cr>", { desc = "Increase window height" })
-vim.keymap.set("n", "<Down>", "<cmd>resize -5<cr>", { desc = "Decrease window height" })
-vim.keymap.set("n", "<Left>", "<cmd>vertical resize -10<cr>", { desc = "Decrease window width" })
-vim.keymap.set("n", "<Right>", "<cmd>vertical resize +10<cr>", { desc = "Increase window width" })
+-- vim.keymap.set("n", "<leader><leader>", function()vim.cmd("so") end)
 
 -- Equalize splits
 vim.keymap.set("n", "<leader>b=", "<cmd>wincmd =<cr>", { desc = "Balance windows" })
@@ -84,10 +75,21 @@ vim.keymap.set("n", "<leader>sr", ":%s/", { desc = "Buffer search/replace" })
 vim.keymap.set("v", "<leader>cs", ":'<,'>sort<cr>", { desc = "Sort selected lines" })
 
 -- Toggle CursorColumn
-vim.keymap.set("n", "<leader>uo", "<cmd>lua require('config.util').toggle_option('cursorcolumn')<cr>",
-  { desc = "Toggle CursorColumn" }
-)
+vim.keymap.set("n", "<leader>uo", "<cmd>lua require('config.util').toggle_option('cursorcolumn')<cr>", { desc = "Toggle CursorColumn" })
 
 -- Toggle ColorColumn
-vim.keymap.set("n", "<leader>uO", "<cmd>lua require('config.util').toggle_colorcolumn()<cr>",
-  { desc = "Toggle ColorColumn" })
+vim.keymap.set("n", "<leader>uO", "<cmd>lua require('config.util').toggle_colorcolumn()<cr>", { desc = "Toggle ColorColumn" })
+
+-- Toggle ColorColumn
+vim.keymap.set("n", "<leader>uO", "<cmd>lua require('config.util').toggle_colorcolumn()<cr>", { desc = "Toggle ColorColumn" })
+
+-- floating terminal
+local lazyterm = function() LazyVim.terminal(nil, { cwd = LazyVim.root() }) end
+vim.keymap.set("n", "<leader>ft", lazyterm, { desc = "Terminal (Root Dir)" })
+vim.keymap.set("n", "<leader>fT", function() LazyVim.terminal() end, { desc = "Terminal (cwd)" })
+vim.keymap.set("n", "<C-.>", lazyterm, { desc = "Terminal (cwd)" })
+vim.keymap.set("n", "<C-/>", "<nop>", { desc = "Toggle Terminal" })
+
+-- Terminal Mappings
+vim.keymap.set("t", "<C-.>", "<cmd>close<cr>", { desc = "Hide Terminal" })
+vim.keymap.set("t", "<C-/>", "<nop>", { desc = "Hide Terminal" })
