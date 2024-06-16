@@ -4,11 +4,17 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 
-
 vim.g.vimsyn_embed = 'l'
 vim.g.autoformat = false
 vim.opt.nu = true
 vim.opt.relativenumber = true
+
+-- You have to turn this one on :)
+vim.opt.inccommand = "split"
+
+-- Best search settings :)
+vim.opt.smartcase = true
+vim.opt.ignorecase = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
