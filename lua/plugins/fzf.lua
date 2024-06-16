@@ -125,14 +125,11 @@ return {
     keys = {
       { "<c-j>", "<c-j>", ft = "fzf", mode = "t", nowait = true },
       { "<c-k>", "<c-k>", ft = "fzf", mode = "t", nowait = true },
-      {
-        "<leader>,",
-        "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>",
-        desc = "Switch Buffer",
-      },
+      { "<leader>,", "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>", desc = "Switch Buffer" },
       { "<leader>/",       LazyVim.pick("live_grep"),                                  desc = "Grep (Root Dir)" },
       { "<leader>:",       "<cmd>FzfLua command_history<cr>",                          desc = "Command History" },
       { "<leader><space>", LazyVim.pick("auto"),                                       desc = "Find Files (Root Dir)" },
+
       -- find
       { "<leader>fb",      "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>", desc = "Buffers" },
       { "<leader>fc",      LazyVim.pick.config_files(),                                desc = "Find Config File" },
@@ -141,9 +138,11 @@ return {
       { "<leader>fg",      "<cmd>FzfLua git_files<cr>",                                desc = "Find Files (git-files)" },
       { "<leader>fr",      "<cmd>FzfLua oldfiles<cr>",                                 desc = "Recent" },
       { "<leader>fR",      LazyVim.pick("oldfiles", { cwd = vim.uv.cwd() }),           desc = "Recent (cwd)" },
+
       -- git
       -- { "<leader>gc",      "<cmd>FzfLua git_commits<CR>",                              desc = "Commits" },
       { "<leader>gs",      "<cmd>FzfLua git_status<CR>",                               desc = "Status" },
+
       -- search
       { '<leader>s"',      "<cmd>FzfLua registers<cr>",                                desc = "Registers" },
       { "<leader>sa",      "<cmd>FzfLua autocmds<cr>",                                 desc = "Auto Commands" },
@@ -168,24 +167,9 @@ return {
       { "<leader>sw",      LazyVim.pick("grep_visual"),                                mode = "v",                       desc = "Selection (Root Dir)" },
       { "<leader>sW",      LazyVim.pick("grep_visual", { root = false }),              mode = "v",                       desc = "Selection (cwd)" },
       { "<leader>uC",      LazyVim.pick("colorschemes"),                               desc = "Colorscheme with Preview" },
-      -- {
-      --  "<leader>ss",
-      --  function()
-      --   require("fzf-lua").lsp_document_symbols({
-      --      regex_filter = symbols_filter,
-      --   })
-      --  end,
-      --  desc = "Goto Symbol",
-      --},
-      -- {
-      --   "<leader>sS",
-      --   function()
-      --     require("fzf-lua").lsp_live_workspace_symbols({
-      --       regex_filter = symbols_filter,
-      --     })
-      --   end,
-      --   desc = "Goto Symbol (Workspace)",
-      -- },
+
+      -- { "<leader>ss",      function() require("fzf-lua").lsp_document_symbols({ regex_filter = symbols_filter, }) end,   desc = "Goto Symbol" },
+      -- { "<leader>sS",      function() require("fzf-lua").lsp_live_workspace_symbols({ regex_filter = symbols_filter, }) end, desc = "Goto Symbol (Workspace)" },
     },
   }
 }
