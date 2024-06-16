@@ -52,7 +52,7 @@ return {
           {
             title = "Spectre",
             ft = "spectre_panel",
-            size = { height = 0.4 }
+            size = { height = 0.3 }
           },
           {
             title = "Neotest Output",
@@ -85,6 +85,7 @@ return {
           --   end,
           --   pinned = true,
           --   open = "Neotree position=right git_status",
+          --   size = { height = 0.5 },
           -- },
           -- {
           --   title = "Neo-Tree Buffers",
