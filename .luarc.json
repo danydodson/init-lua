@@ -1,0 +1,18 @@
+{
+  "Lua.format.defaultConfig": {
+    "indent_style": "space",
+    "indent_size": "2"
+  },
+  "Lua.diagnostics.disable": [
+    "undefined-global",
+    "undefined-doc-name",
+    "undefined-field",
+    "inject-field",
+    "no-unknown",
+    "unused-local",
+    "different-requires"
+  ],
+  "diagnostics.globals": [
+    "vim"
+  ]
+}
