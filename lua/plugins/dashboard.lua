@@ -1,5 +1,3 @@
--- https://github.com/nvimdev/dashboard-nvim
--- https://www.lazyvim.org/plugins/ui#dashboard-nvim
 
 return {
   {
@@ -55,7 +53,7 @@ return {
 
       for _, button in ipairs(opts.config.center) do
         button.desc = button.desc .. string.rep(" ", 43 - #button.desc)
-        button.key_format = "  %s"
+        button.key_format = " . %s"
       end
 
       -- close Lazy and re-open when the dashboard is ready

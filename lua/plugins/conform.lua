@@ -1,4 +1,3 @@
--- https://github.com/folke/dot/blob/master/nvim/lua/plugins/lsp.lua
 
 return {
   {

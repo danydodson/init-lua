@@ -1,10 +1,17 @@
--- https://www.lazyvim.org/plugins/colorscheme
-
 return {
   {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "onedark",
+    {
+      "olimorris/onedarkpro.nvim",
+      priority = 1000,
+      lazy = true,
+      opts = {
+        transparency = false,
+        lualine_transparency = true,
+      },
+    },
+    {
+      "LazyVim/LazyVim",
+      opts = { colorscheme = "onedark" },
     },
   },
 }

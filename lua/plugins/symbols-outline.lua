@@ -1,4 +1,3 @@
--- https://github.com/simrat39/symbols-outline.nvim
 
 return {
   {

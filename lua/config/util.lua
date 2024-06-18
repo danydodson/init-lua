@@ -1,3 +1,4 @@
+
 local M = {}
 
 function M.toggle_option(option)

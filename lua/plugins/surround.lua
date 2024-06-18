@@ -1,4 +1,3 @@
--- https://github.com/echasnovski/mini.surround
 
 return {
   {

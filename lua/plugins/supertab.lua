@@ -1,4 +1,3 @@
--- https://www.lazyvim.org/configuration/recipes#supertab
 
 return {
   -- Setup supertab in cmp
@@ -17,7 +16,7 @@ return {
 
       local luasnip = require("luasnip")
       local cmp = require("cmp")
-      
+
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
