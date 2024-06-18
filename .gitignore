@@ -1,45 +1,5 @@
-# gitignore
-.luarc.json
-after
-coc-settings.json
-colors
-docs
-ftplugin
-ginit.vim
-neoconf.json
-plugin
-queries
-spell
-.history
 .vscode
-hide
-
-# macos
-.AppleDouble
 .DS_Store
-.LSOverride
-._*
-
-# (neo)vim
-*~
 .netrwhist
-Session.vim
-Sessionx.vim
-[._]*.s[a-v][a-z]
-[._]*.sw[a-p]
-[._]s[a-rt-v][a-z]
-[._]ss[a-gi-z]
-[._]sw[a-p]
-[._]*.un~
-tags
-
-# ???
 .repro
-foo.*
 *.log
-tt.*
-.tests
-doc/tags
-debug
-data
-ignore
